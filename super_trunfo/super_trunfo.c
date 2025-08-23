@@ -13,15 +13,15 @@ int main(){
     float pibp, pibp2;
     float media;
 
-    printf("CADASTRE A CARTA Nº1\n\n");
+    printf("=== CADASTRE A CARTA Nº1 ===\n\n");
     
-    printf("Digite o código da Carta: ");
+    printf("Digite o código da Carta (Ex.: A01): ");
     scanf("%s", &codigo);
     
     printf("Digite o nome da cidade: ");
     scanf("%s", &nomeCidade);
 
-    printf("Digite o estado: ");
+    printf("Digite o estado (Ex.: SP): ");
     scanf("%s", &estado);
 
     printf("Digite a população: ");
@@ -33,24 +33,8 @@ int main(){
     printf("Digite o PIB: ");
     scanf("%f", &pib);
 
-    printf("Numeros de Pontos Tutisticos: ");
+    printf("Numeros de Pontos Turisticos: ");
     scanf("%d", &pontoTuristico);
-
-    printf("\n\n");
-
-    media = (float)(populacao / area);
-    media = (float)(pib / populacao);
-
-    printf("CARTAS Nº 1\n\n");
-    printf("Código da Carta: %s\n", codigo);
-    printf("Nome da cidade: %s\n", nomeCidade);
-    printf("Estado: %s\n", estado);
-    printf("População: %d pessoas\n", populacao);
-    printf("Área: %f km²\n", area);
-    printf("PIB: %f bilhões de reais\n", pib);
-    printf("Pontos Turisticos: %d\n", pontoTuristico);
-    printf("Densidade Populacional: %f hab/km²\n", populacao / area);
-    printf("PIB per capita: %f reais\n", pib / populacao);
 
     //fim do cadastro das cartas 1
 
@@ -60,15 +44,15 @@ int main(){
 
     //inicio do cadastro das cartas 2
 
-    printf("CADASTRE A CARTA Nº2\n\n");
+    printf("=== CADASTRE A CARTA Nº2 ===\n\n");
 
-    printf("Digite o código da Carta: ");
+    printf("Digite o código da Carta (Ex.: A02): ");
     scanf("%s", &codigo2);
 
     printf("Digite o nome da cidade: ");
     scanf("%s", &nomeCidade2);
 
-    printf("Digite o estado: ");
+    printf("Digite o estado (Ex.: SP): ");
     scanf("%s", &estado2);
 
     printf("Digite a população: ");
@@ -83,14 +67,35 @@ int main(){
     printf("Numeros de Pontos Turisticos: ");
     scanf("%d", &pontoTuristico2);
 
+    //fim do cadastro das cartas 2
+
+    printf("\n\n");
+
+    // INICIO REPOSTAS DAS CARTAS
+
+    
+    media = (float)(populacao / area);
+    media = (float)(pib / populacao);
+
+    printf("=== CARTA Nº 1 ===\n\n");
+    printf("Código da Carta: %s\n", codigo);
+    printf("Nome da cidade: %10.s\n", nomeCidade);
+    printf("Estado: %s\n", estado);
+    printf("População: %d pessoas\n", populacao);
+    printf("Área: %f km²\n", area);
+    printf("PIB: %f bilhões de reais\n", pib);
+    printf("Pontos Turisticos: %d\n", pontoTuristico);
+    printf("Densidade Populacional: %f hab/km²\n", populacao / area);
+    printf("PIB per capita: %f reais\n", pib / populacao);
+
     printf("\n\n");
 
     media = (float)(populacao2 / area2);
     media = (float)(pib2 / populacao2);
 
-    printf("CARTAS Nº2 \n\n");
+    printf("=== CARTA Nº2 ===\n\n");
     printf("Código da Carta nº2: %s\n", codigo2);
-    printf("Nome da cidade: %s\n", nomeCidade2);
+    printf("Nome da cidade: %10.s\n", nomeCidade2);
     printf("Estado: %s\n", estado2);
     printf("População: %d pessoas\n", populacao2);
     printf("PIB: %f bilhões de reais\n", pib2);
@@ -100,6 +105,12 @@ int main(){
 
     printf("\n\n");
 
+    if(populacao > populacao2){
+        printf("--> %s Venceu!", nomeCidade);
+    } else if (populacao < populacao2) {
+        printf("--> %s Venceu!", nomeCidade2);
+    }
 
+    printf("\n\n");
     return 0;
 }
